@@ -5,6 +5,7 @@
   <title>꾸주니 PRO 오픈!</title>
   <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff" rel="styleshhet">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     @font-face {
       font-family: 'Arita-dotum-Medium';
@@ -21,18 +22,40 @@
       -webkit-text-size-adjust: 100%;
     }
 
-    .flickity-button {
-      display: none;
-    }
     .carousel {
       margin-top: 12px;
     }
 
     .carousel-cell {
-      width: 92%;
+      width: calc(100% - 60px);
       margin-right: 12px;
       background: #fff;
       border-radius: 20px;
+    }
+
+    .flickity-page-dots .dot {
+      width: 8px;
+      height: 8px;
+      opacity: 1;
+      background: #AEAEAE;
+      margin-right: 6;
+      margin-left: 0;
+    }
+    /* fill-in selected dot */
+    .flickity-page-dots .dot.is-selected {
+      background: #FF9A00;
+    }
+
+    .top-banner {
+      background-color: #fff;
+      border-radius: 20px;
+      margin-left: 30px; 
+      margin-right: 30px; 
+      padding-top: 19px; 
+      padding-bottom: 17px;
+      background-image: url(/payment/bg_banner.png);
+      background-repeat: no-repeat;
+      background-position: center 12px;
     }
   </style>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -40,7 +63,7 @@
 
 <body style="background-color: #f5f5f5;">
 
-    <div style="background-color: #ffffff; border-radius: 20px; margin-left: 30px; margin-right: 30px; padding-top: 19px; padding-bottom: 17px;">
+    <div class="top-banner">
       <center style="font-size: 12px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #FF9A00; text-align: center;">
         오픈기념 50% 할인
       </center>
@@ -50,25 +73,7 @@
       </center>
     </div>
 
-    <div style="background-color: #ffffff; border-radius: 20px; margin-top: 12px; margin-left: 30px; margin-right: 30px; padding-top: 40px;">
-      <center style="font-size: 16px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #FF9A00; text-align: center;">
-        혜택 01
-      </center>
-      <center style="margin-top: 4px; font-size: 22px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #000000; text-align: center;">
-        무제한 챌린지 추가
-      </center>
-      <center style="line-height: 31px; margin-top: 25px; font-size: 18px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #AEAEAE; text-align: center;">
-        습관 3개로는 부족하신가요?</br>
-        꾸주니 더하기에서 챌린지를</br>
-        무제한으로 만들 수 있어요!
-      </center>
-
-      <center>
-      <img style="margin-bottom: -5px;" src="/payment/img_card_01.jpg" />
-      </center>
-    </div>
-
-    <div class="carousel" data-flickity='{ }'>
+    <div class="carousel" data-flickity='{ "prevNextButtons": false, "pageDots": true }'>
       <div class="carousel-cell">
         <div style="padding-top: 40px;">
           <center style="font-size: 16px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #FF9A00; text-align: center;">
@@ -78,8 +83,8 @@
             무제한 챌린지 추가
           </center>
           <center style="line-height: 31px; margin-top: 25px; font-size: 18px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #AEAEAE; text-align: center;">
-            습관 3개로는 부족하신가요?</br>
-            꾸주니 더하기에서 챌린지를</br>
+            습관 3개로는 부족하신가요?<br/>
+            꾸주니 더하기에서 챌린지를<br/>
             무제한으로 만들 수 있어요!
           </center>
     
@@ -91,38 +96,38 @@
       <div class="carousel-cell">
         <div style="padding-top: 40px;">
           <center style="font-size: 16px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #FF9A00; text-align: center;">
-            혜택 01
+            혜택 02
           </center>
           <center style="margin-top: 4px; font-size: 22px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #000000; text-align: center;">
-            무제한 챌린지 추가
+            광고 제거
           </center>
           <center style="line-height: 31px; margin-top: 25px; font-size: 18px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #AEAEAE; text-align: center;">
-            습관 3개로는 부족하신가요?</br>
-            꾸주니 더하기에서 챌린지를</br>
-            무제한으로 만들 수 있어요!
+            광고 때문에 지루하셨다면?<br/>
+            이제 광고없이 꾸주니를<br/>
+            편안하게 즐겨보세요!
           </center>
     
           <center>
-          <img style="margin-bottom: -5px;" src="/payment/img_card_01.jpg" />
+          <img style="margin-bottom: -5px;" src="/payment/img_card_02.png" />
           </center>
         </div>
       </div>
       <div class="carousel-cell">
         <div style="padding-top: 40px;">
           <center style="font-size: 16px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #FF9A00; text-align: center;">
-            혜택 01
+            혜택 03
           </center>
           <center style="margin-top: 4px; font-size: 22px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #000000; text-align: center;">
-            무제한 챌린지 추가
+            평생 무료
           </center>
           <center style="line-height: 31px; margin-top: 25px; font-size: 18px; font-family: 'Arita-dotum-Medium'; font-weight: bold; color: #AEAEAE; text-align: center;">
-            습관 3개로는 부족하신가요?</br>
-            꾸주니 더하기에서 챌린지를</br>
-            무제한으로 만들 수 있어요!
+            한 번만 구매해도 평생 무료로<br/>
+            꾸주니 더하기 혜택을<br/>
+            누릴 수 있어요!
           </center>
     
           <center>
-          <img style="margin-bottom: -5px;" src="/payment/img_card_01.jpg" />
+          <img style="margin-bottom: -5px;" src="/payment/img_card_03.png" />
           </center>
         </div>
       </div>
